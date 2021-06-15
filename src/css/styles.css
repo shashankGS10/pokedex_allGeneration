@@ -1,0 +1,204 @@
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+body {
+	position: relative;
+	font-size: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	min-height: 100vh;
+}
+
+.flex__container {
+    overflow-y: scroll;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap; 
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	-o-justify-content: flex-start;
+	justify-content: flex-start;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+
+.text--sub {
+	font-size: 12px;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.text--big {
+	font-family: 'Poppins', sans-serif;
+	font-size: 7.5em;
+	font-weight: 700;
+	line-height: 110px;
+  margin-left: -8px;
+}
+
+.text--normal {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 22px;
+	margin-top: 25px;
+}
+
+.text__background {
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+	left: 72px;
+	bottom: -60px;
+	color: rgba(0,0,0,0.05);
+	font-size: 170px;
+	font-weight: 700;
+}
+
+.flex__item {
+	height: 100vh;
+	color: #fff;
+	transition: transform 0.1s linear;
+}
+
+.flex__item--left {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	width: 65%;
+	transform-origin: left bottom;
+	transition: transform 0.1s linear 0.4s;
+	position: relative;
+	overflow: hidden;
+}
+
+.flex__item--right {
+	width: 35%;
+	transform-origin: right center;
+	transition: transform 0.1s linear 0s;
+}
+
+.flex--preStart .flex__item--left,
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+	opacity: 1;
+}
+
+/* chikorita */
+
+.flex--chikorita .flex__item--left {
+	background: #6cca2e;
+}
+
+.flex--chikorita .flex__item--right {
+	background: #d3efd4;
+}
+
+/* Pikachu */
+
+.flex--pikachu .flex__item--left {
+	background: #f8d41f;
+}
+
+.flex--pikachu .flex__item--right {
+	background: #f4ecc5;
+}
+
+/* Combusken */
+
+.flex--combusken .flex__item--left {
+	background: #f64f37;
+}
+
+.flex--combusken .flex__item--right {
+	background: #ffebcd;
+}
+
+/* Dialga */
+
+.flex--combee .flex__item--left {
+	background: #476089;
+}
+
+.flex--combee .flex__item--right {
+	background: #ade8f7;
+}
+
+/* Purrloin */
+
+.flex--purrloin .flex__item--left {
+	background: #424242;
+}
+
+.flex--purrloin .flex__item--right {
+	background: #dfbcec;
+}
+
+/* Amaura */
+
+.flex--amaura .flex__item--left {
+	background: #a77a1b;
+}
+
+.flex--amaura .flex__item--right {
+	background: #a1e8f1;
+}
+
+/* Mimikyu */
+
+.flex--mimikyu .flex__item--left {
+	background: #e2ded6;
+}
+
+.flex--mimikyu .flex__item--right {
+	background: #201f1f;
+}
+/* Nickit */
+
+.flex--nickit .flex__item--left {
+	background: #694d0ff5;
+}
+
+.flex--nickit .flex__item--right {
+	background: #ffefc2;
+}
+
+.flex__content {
+	margin-left: 80px;
+	width: 55%;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+}
+
+.pokemon__img {
+	position: absolute;
+	bottom: 20px;
+	right: 15%;
+	max-height: 35vw;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+}
